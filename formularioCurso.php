@@ -25,7 +25,7 @@
 
 <div class="container">
 
-<form action="tratarFormulario.php" method="post">  
+<form action="tratarformulario.php" method="post">  
 
 
     <p> Nombre: <input type="text" name="nombre"/>  
@@ -94,8 +94,8 @@
     </p>
 
     <p><input type="submit" value="Enviar" name="B1"></p>
-
 </form>
-</div>
+
 </body>
+
 </html>

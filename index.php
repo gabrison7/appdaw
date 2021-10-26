@@ -1,89 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-<div class="container mt-3">
-
-<?php 
-
-echo "<h2>APLICACION DAW</h2>";
-
-$usuario = "Alejandro";
-$curso = "2DAW";
-
+<?php
+include_once 'cabecera.php';
 ?>
 
-<p><?php
-    // echo $usuario.'-'.$curso;
-    // echo '<br>';
-    // $valores = [10,20,30];
 
-    // for($i=0;$i<3;$i++){
-    //     echo $valores[$i].' ';
-    // }
+<body>
 
-    echo '<a href="a.php" class="btn btn-info" role="button">Compras</a>'; 
-?></p>
+<div class="container">
 
-<?php
+    <?php
+   
 
-  $array = [[5, 10, 15],
+    $usuario = "Alejandro";
+    $curso = "2DAW";
 
-            [10, 20, 30],
-
-            [100, 200, 300]];
-
+    include_once 'menu.php';
+    ?>
   
+  <p>Usuario:<?php echo $usuario.'-'.$curso; 
+  
+ 
+  echo '<br>';
+ 
+
+  $array = [['Juan', 4, 78],
+
+  ['Ana', 20, 30],
+
+  ['Marcos', 200, 300]];
+
+
 
 // Mostramos mensaje con el índice de cada  array y los valores que contiene
-
-
 echo '<table class="table">
     <thead>
     <tr>
-    <th>Valor 1</th>
-    <th>Valor 2</th>
-    <th>Valor 3</th>
+    <th>Empleado</th>
+    <th>Cuota 1</th>
+    <th>Cuota 2</th>
     <th></th>
     <th></th>
-    </tr>
-    </thead>
-    <tbody>';
+  </tr>
+</thead>
+<tbody>';
 
-
-  for($i=0; $i<count($array); $i++) {
-
-    echo '<tr>';
-
-
+for($i=0; $i<count($array); $i++) {
+echo '<tr>';
     for($x=0; $x<count($array[$i]); $x++) {
-        echo '<td>';
-
-      echo $array[$i][$x];
-
-      echo '</td>';
-
+       echo '<td>';
+         echo $array[$i][$x];
+       echo '</td>';
     } // fin de bucle inferior
+  echo '<td><a href="#" class="btn btn-info" role="button">Editar</a></td>';
+  echo '<td><a href="#" class="btn btn-danger" role="button">Eliminar</a></td>';
+echo '</tr>';
+} // fin de bucle superior
 
-    echo "</p>";
+echo '</tbody>
+</table>';
 
-    echo '<td>
-    <a href="#" class="btn btn-info" role="button">Editar</a>
-    </td>
-    <td>
-    <a href="#" class="btn btn-danger" role="button">Eliminar</a>
-    </td>';
+  
+  ?> </p>            
+  
+</div>
 
-    echo '</tr>';
-  } // fin de bucle superior
+</body>
 
-  echo '</tbody>
-  </table>';
 
-?>
