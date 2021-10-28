@@ -1,0 +1,11 @@
+Plomo-ácido (PB-ácido)
+Níquel-hidruro metálico (NiMh)
+Ion-litio (LiCoO2)
+Ion-litio con cátodo de LiFePO4
+Polímero de litio (LiPo)
+
+Tesla
+Peugeot
+Renault
+Audi
+Volkswagen

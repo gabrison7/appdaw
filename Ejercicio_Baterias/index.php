@@ -19,7 +19,8 @@
     </select><br>
     Marca: <input type="text" name="marca" id="marca" placeholder="Marca del coche"><br>
     Modelo: <input type="text" name="modelo" id="modelo" placeholder="Modelo del coche"><br>
-    Capacidad: <input type="text" name="carga" id="carga" placeholder="Carga de las baterías(%)"><br>
+    Capacidad: <input type="text" name="capacidad" id="capacidad" placeholder="Capacidad de las baterías (MAh)"><br>
+    Carga: <input type="text" name="carga" id="carga" placeholder="Carga de las baterías (%)"><br>
     Ciclos de vida: <input type="text" name="ciclos" id="ciclos" placeholder="Ciclos de vida restantes"><br><br>
     <table>
         <tr>Est </tr>
