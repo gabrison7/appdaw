@@ -13,6 +13,7 @@
  fputs($abrir, $producto1);
  fputs($abrir, $producto2);
  fputs($abrir, $producto3);
+ fputs($abrir, $producto4);
 
 //Cerrar el archivo
  fclose($abrir);
