@@ -47,6 +47,6 @@ function obtenerConexionPDO($config)
        } // end try
 
    }
-
-
+   
+   
 ?>
