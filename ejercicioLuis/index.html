@@ -7,6 +7,46 @@
     <title>Document</title>
 </head>
 <body>
-    hola
+    NOMBRE:
+    <div class="form-group">
+      <label for=""></label>
+      <input type="text" class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Sólo letras A-Z">
+    </div><br>
+
+    SEXO:
+    <div class="form-check">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="sexo" id="sexo" value="checkedValue" checked>
+        Varón
+      </label>
+    </div>
+    <div class="form-check">
+        <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="sexo" id="sexo" value="checkedValue" checked>
+        Varona
+      </label>
+    </div><br>
+
+    EDAD:
+    <div class="form-group">
+      <label for=""></label>
+      <input type="text"
+        class="form-control" name="edad" id="edad" aria-describedby="helpId" placeholder="Sólo números">
+    </div><br>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+
+    <?php
+    try{
+        //CONSTRUIMOS LA SENTENCIA SQL
+        $sql = "INSERT INTO usuario (nombre, sexo, edad) VALUES ('htm', 23, 'luismr@ies.es')";
+        // se usa exec() porque la sentencia no devuelve ningún valor
+        $conexionPDO->exec($sql);
+        echo "<p>Nueva fila creada correctamente";
+     
+      } catch(PDOException $e) {
+        echo $sql . "<br>" . $e->getMessage();
+      }
+    ?>
 </body>
 </html>
