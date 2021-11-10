@@ -1,5 +1,0 @@
-1 - Plomo-ácido (PB-ácido) - Peugeot - e-Rifter - 100kWh
-2 - Níquel-hidruro metálico (NiMh) - Volkswagen - Golf GTe - 77kWh
-3 - Ion-litio (LiCoO2) - Tesla - Model X - 100kWh
-4 - Ion-litio con cátodo de LiFePO4 - Renault - Zoe - 52kWh
-5 - Polímero de litio (LiPo) - Audi - q8 55 - 280kWh
