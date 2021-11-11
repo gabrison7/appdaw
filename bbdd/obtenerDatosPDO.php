@@ -1,6 +1,10 @@
+
 <?php
 
-include_once 'datosconexionBD.php';
+define("SERVIDOR", "localhost");
+define("USUARIO", "root");
+define("CLAVE", "");
+define("BBDD", "luisBD");
 
 // Crear una conexion
 // En la conexión, indicamos la base de datos que queremos utilizar.
@@ -9,28 +13,31 @@ $con = mysqli_connect(SERVIDOR, USUARIO, CLAVE, BBDD);
 if (!$con) {
     die("Error en la conexión: " . mysqli_connect_error());
 }
-// preparar y vincular
-$stmt = $con->prepare("INSERT INTO usuario (nombre,sexo,edad ) VALUES (?,?,?)");
-$stmt->bind_param("sis", $nombre, $sexo, $edad);
 
+// preparar y vincular
+$stmt = $con->prepare("INSERT INTO Pacientes (nombre, direccion ) VALUES (?, ?)");
+$stmt->bind_param("ss", $nombre, $direccion);
 // establecemos los parámetros y ejecutamos
 
 $nombre = "José";
-$edad = 40;
 $sexo = "Varón";
+$edad = 11;
 $stmt->execute();
 
-$nombre = "María";
-$edad = 41;
-$sexo = "Varona";
+$nombre = "José";
+$sexo = "Josito";
+$edad = 11;
 $stmt->execute();
 
-$nombre = "Jesús";
-$edad = 42;
+$nombre = "Josué";
 $sexo = "Varón";
+$edad = 11;
 $stmt->execute();
 
 echo "Las filas se han insertado correctamente";
 
 $stmt->close();
 $con->close();
+?>
+
+
